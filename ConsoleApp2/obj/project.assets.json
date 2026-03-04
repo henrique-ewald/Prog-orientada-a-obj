@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HESantos\\Objetos exrc\\ConsoleApp2\\ConsoleApp2.csproj",
+      "projectUniqueName": "C:\\Users\\HESantos\\Objetos exrc\\Prog-orientada-a-obj\\ConsoleApp2\\ConsoleApp2.csproj",
       "projectName": "ConsoleApp2",
-      "projectPath": "C:\\Users\\HESantos\\Objetos exrc\\ConsoleApp2\\ConsoleApp2.csproj",
+      "projectPath": "C:\\Users\\HESantos\\Objetos exrc\\Prog-orientada-a-obj\\ConsoleApp2\\ConsoleApp2.csproj",
       "packagesPath": "C:\\Users\\HESantos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HESantos\\Objetos exrc\\ConsoleApp2\\obj\\",
+      "outputPath": "C:\\Users\\HESantos\\Objetos exrc\\Prog-orientada-a-obj\\ConsoleApp2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HESantos\\AppData\\Roaming\\NuGet\\NuGet.Config",
