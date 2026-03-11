@@ -5,14 +5,14 @@ namespace ConsoleApp2;
 public class Funcionario
 {
     public string Nome { get; private set; }
-    public string Cargo { get; private set; }
+    public Cargo posicao { get; set; }
     public decimal SalarioBruto { get; private set; }
 
-    public Funcionario(string Nome, string Cargo, decimal SalarioBruto)
+    public Funcionario(string Nome, decimal SalarioBruto)
     {
         this.Nome = Nome;
-        this.Cargo = Cargo;
         this.SalarioBruto = SalarioBruto;
+        posicao = new Cargo();
     }
 
     private decimal SalarioLiquido { get; set; }
