@@ -36,7 +36,7 @@ public class Programa
 
     private static Participante CadastrarParticipante()
     {
-        Console.
+        //Console.
     }
 
     static Palestrante[] AdicionarPalestrante(Palestrante cliente)
