@@ -2,8 +2,10 @@ using System;
 
 namespace ConsoleApp4;
 
-public class Palestrante : Pessoa
+public class Palestrante
 {
-       public decimal ValorHora {get;set;}
-
+    public string Nome {get;set;}
+    public string Email {get;set;}
+    public string Telefone {get;set;}
+    public decimal ValorHora {get;set;}
 }
