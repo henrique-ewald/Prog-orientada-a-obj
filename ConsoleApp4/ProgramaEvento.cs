@@ -13,7 +13,7 @@ public class Programa
         Console.WriteLine("Informe a capacidade do local:");
         int capacidadeLocal = int.Parse(Console.ReadLine());
         Local local = new Local();
-        local.Id = local.NovoIdentificador();
+        local.id = local.Id();
         local.Nome = nomeLocal;
         local.Endereco = enderecoLocal;
         local.Capacidade = capacidadeLocal;
@@ -24,11 +24,11 @@ public class Programa
         string Nome = "";
         string Email = "";
         string Telefone = "";
-        System.Console.WriteLine("Informe o Valor Hora em R$: ");
+        Console.WriteLine("Informe o Valor Hora em R$: ");
         var valorHora = Console.ReadLine();
         Palestrante palestrante = new Palestrante();
-        palestrante.CadastrarPessoa(ref Nome, ref Email, ref Telefone);
-        palestrante.Id = palestrante.NovoIdentificador();
+        palestrante.CadastrarPessoa(palestrante);
+        palestrante.id = palestrante.Id();
         palestrante.ValorHora = decimal.Parse(valorHora);
 
         return palestrante;
@@ -36,24 +36,32 @@ public class Programa
 
     private static Participante CadastrarParticipante()
     {
-        //Console.
+        string Nome = "";
+        string Email = "";
+        string Telefone = "";
+        Participante qualquer = new Participante();
+        qualquer.CadastrarPessoa(qualquer);
+        qualquer.id = qualquer.Id();
+
+        return qualquer;
     }
 
-    static Palestrante[] AdicionarPalestrante(Palestrante cliente)
+    public static TipoGenerico[] AdicionaVetor<TipoGenerico>(TipoGenerico cliente, TipoGenerico[] VetorGenerico)
     {
-        Palestrante[] novoVetor = new Palestrante[todosPalestrantes.Length + 1];
+        TipoGenerico[] novoVetor = new TipoGenerico[VetorGenerico.Length + 1];
 
         int cont;
 
-        for (cont = 0; cont < todosPalestrantes.Length; cont++)
+        for (cont = 0; cont < VetorGenerico.Length; cont++)
         {
-            novoVetor[cont] = todosPalestrantes[cont];
+            novoVetor[cont] = VetorGenerico[cont];
         }
 
         novoVetor[novoVetor.Length - 1] = cliente;
 
         return novoVetor;
     }
+
     static Participante[] todosParticipantes = [];
     static Palestrante[] todosPalestrantes = [];
 
@@ -83,7 +91,7 @@ public class Programa
                 //Pede para o usuario as informacoes e gera o objeto Palestrante
                 var novoPalestrante = CadastrarPalestrante();
                 //aqui esta adicionando no vetor de todosPalestrantes.
-                todosPalestrantes = AdicionarPalestrante(novoPalestrante);
+                todosPalestrantes = (Palestrante)AdicionaVetor(novoPalestrante, //AQUI FALTA IMPLEMENTAR);
             }
             else if (opcao == 31)
             {

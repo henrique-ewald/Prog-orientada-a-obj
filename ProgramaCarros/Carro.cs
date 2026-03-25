@@ -8,6 +8,7 @@ public class Carro : Veiculo
 
     public Carro(string Marca, string Modelo, int Ano, double Velocidade, int QuantidadePortas)
     {
+        this.Marca = Marca;
         this.Modelo = Modelo;
         this.Ano = Ano;
         this.Velocidade = Velocidade;

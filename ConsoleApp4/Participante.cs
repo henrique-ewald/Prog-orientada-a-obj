@@ -4,5 +4,6 @@ namespace ConsoleApp4;
 
 public class Participante : Pessoa
 {
-    
+
+
 }

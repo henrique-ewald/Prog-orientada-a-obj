@@ -2,21 +2,22 @@ using System;
 
 namespace ConsoleApp4;
 
-public abstract class Pessoa : Identificador
+public class Pessoa : Identificador
 {
     public string Nome {get;set;}
     public string Email {get;set;}
     public string Telefone {get;set;}
-
     
-
-    public void CadastrarPessoa(ref string nome, ref string telefone, ref string email)
+    //ref string nome, ref string telefone, ref string email
+    public void CadastrarPessoa(Pessoa nova)
     {
+        nova = new Pessoa();
+
         Console.WriteLine("Informe o nome: ");
-        nome = Console.ReadLine();
+        nova.Nome = Console.ReadLine();
         Console.WriteLine("Informe o telefone: ");
-        telefone = Console.ReadLine();
+        nova.Telefone = Console.ReadLine();
         System.Console.WriteLine("Informe o email: ");
-        email = Console.ReadLine();
+        nova.Email = Console.ReadLine();
     }
 }

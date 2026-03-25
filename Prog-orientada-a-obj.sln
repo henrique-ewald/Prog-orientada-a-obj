@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp3", "ConsoleApp3\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp4", "ConsoleApp4\ConsoleApp4.csproj", "{539C9239-54A0-6FE0-FF1E-F8A4023404F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramaCarros", "ProgramaCarros\ProgramaCarros.csproj", "{0AD013B0-3908-4854-BC58-67A8AFECDBF0}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "teste", "teste\teste.csproj", "{46F94121-9146-7738-04AB-CF6591008EFB}"
 EndProject
 Global
@@ -28,6 +30,10 @@ Global
 		{539C9239-54A0-6FE0-FF1E-F8A4023404F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{539C9239-54A0-6FE0-FF1E-F8A4023404F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{539C9239-54A0-6FE0-FF1E-F8A4023404F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AD013B0-3908-4854-BC58-67A8AFECDBF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD013B0-3908-4854-BC58-67A8AFECDBF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD013B0-3908-4854-BC58-67A8AFECDBF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD013B0-3908-4854-BC58-67A8AFECDBF0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{46F94121-9146-7738-04AB-CF6591008EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{46F94121-9146-7738-04AB-CF6591008EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46F94121-9146-7738-04AB-CF6591008EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU

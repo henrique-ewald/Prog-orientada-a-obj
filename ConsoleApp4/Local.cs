@@ -8,5 +8,9 @@ public class Local : Identificador
     public string Nome {get;set;}
     public int Capacidade {get;set;}
 
-   
+    public override string Id()
+    {
+        var LocalId = Guid.NewGuid().ToString();
+        return LocalId;
+    }
 }
