@@ -8,16 +8,17 @@ public class Pessoa : Identificador
     public string Email {get;set;}
     public string Telefone {get;set;}
     
-    //ref string nome, ref string telefone, ref string email
-    public void CadastrarPessoa(Pessoa nova)
+    public void CadastrarPessoa()
     {
-        nova = new Pessoa();
-
         Console.WriteLine("Informe o nome: ");
-        nova.Nome = Console.ReadLine();
+        this.Nome = Console.ReadLine();
         Console.WriteLine("Informe o telefone: ");
-        nova.Telefone = Console.ReadLine();
+        this.Telefone = Console.ReadLine();
         System.Console.WriteLine("Informe o email: ");
-        nova.Email = Console.ReadLine();
+        this.Email = Console.ReadLine();
+    }
+    public override string ObterDescricao()
+    {
+        return $"[ID: {id}] Nome: {Nome} | Email: {Email} | Telefone: {Telefone}";
     }
 }

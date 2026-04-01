@@ -24,10 +24,10 @@ public class Programa
         string Nome = "";
         string Email = "";
         string Telefone = "";
+        Palestrante palestrante = new Palestrante();
+        palestrante.CadastrarPessoa();
         Console.WriteLine("Informe o Valor Hora em R$: ");
         var valorHora = Console.ReadLine();
-        Palestrante palestrante = new Palestrante();
-        palestrante.CadastrarPessoa(palestrante);
         palestrante.id = palestrante.Id();
         palestrante.ValorHora = decimal.Parse(valorHora);
 
@@ -40,7 +40,7 @@ public class Programa
         string Email = "";
         string Telefone = "";
         Participante qualquer = new Participante();
-        qualquer.CadastrarPessoa(qualquer);
+        qualquer.CadastrarPessoa();
         qualquer.id = qualquer.Id();
 
         return qualquer;
@@ -62,8 +62,22 @@ public class Programa
         return novoVetor;
     }
 
+    static void Listar<TipoObj>(TipoObj[] meuVetor) where TipoObj : Identificador
+    {
+        if (meuVetor.Length == 0)
+        {
+            Console.WriteLine("Nenhum registro encontrado.");
+            return;
+        }
+        for (int i = 0; i < meuVetor.Length; i++)
+        {
+            Console.WriteLine($"{i + 1} {meuVetor[i].ObterDescricao()}");
+        }
+    }
+
     static Participante[] todosParticipantes = [];
     static Palestrante[] todosPalestrantes = [];
+    static Local[] TodosLocais = [];
 
     private static void Main(string[] args)
     {
@@ -77,6 +91,7 @@ public class Programa
         {
             Console.WriteLine("10 - Cadastrar Local");
             Console.WriteLine("20 - Cadastrar Participante");
+            Console.WriteLine("21 - Listar Participantes");
             Console.WriteLine("30 - Cadastrar Palestrante");
             Console.WriteLine("31 - Listar todos os Palestrantes");
             Console.WriteLine("99 - Sair do sistema");
@@ -84,21 +99,30 @@ public class Programa
 
             if (opcao == 10)
             {
-                localDoEvento = CadastraLocal();
+                var NovoLocal = CadastraLocal();
+                TodosLocais = AdicionaVetor(NovoLocal, TodosLocais);
+            }
+            else if (opcao == 11)
+            {
+                      
+            }
+            else if (opcao == 20)
+            {
+                var NovoParticipante = CadastrarParticipante();
+                todosParticipantes = AdicionaVetor(NovoParticipante, todosParticipantes);
+            }
+            else if (opcao == 21)
+            {
+                Listar(todosParticipantes);
             }
             else if (opcao == 30)
             {
-                //Pede para o usuario as informacoes e gera o objeto Palestrante
                 var novoPalestrante = CadastrarPalestrante();
-                //aqui esta adicionando no vetor de todosPalestrantes.
-                todosPalestrantes = (Palestrante)AdicionaVetor(novoPalestrante, //AQUI FALTA IMPLEMENTAR);
+                todosPalestrantes = AdicionaVetor(novoPalestrante, todosPalestrantes);
             }
             else if (opcao == 31)
             {
-                foreach (var item in todosPalestrantes)
-                {
-                    Console.WriteLine($"{item.Nome} - {item.Email} - {item.Telefone}");
-                }   
+                Listar(todosPalestrantes);
             }
 
         }while(opcao != 99);

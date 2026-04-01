@@ -10,5 +10,9 @@ public abstract class Identificador
     {
           return Guid.NewGuid().ToString();
     }
+    public virtual string ObterDescricao()
+    {
+        return Id();
+    }
     
 }
