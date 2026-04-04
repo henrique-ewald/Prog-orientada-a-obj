@@ -4,11 +4,11 @@ namespace ConsoleApp4;
 
 public abstract class Identificador
 {
-    public string id;
+    protected string id;
    
-    public virtual string Id()
+    protected virtual string Id()
     {
-          return Guid.NewGuid().ToString();
+        return Guid.NewGuid().ToString();
     }
     public virtual string ObterDescricao()
     {

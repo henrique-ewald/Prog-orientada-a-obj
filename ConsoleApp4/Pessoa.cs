@@ -4,9 +4,9 @@ namespace ConsoleApp4;
 
 public class Pessoa : Identificador
 {
-    public string Nome {get;set;}
-    public string Email {get;set;}
-    public string Telefone {get;set;}
+    private string Nome {get;set;}
+    private string Email {get;set;}
+    private string Telefone {get;set;}
     
     public void CadastrarPessoa()
     {
@@ -16,6 +16,7 @@ public class Pessoa : Identificador
         this.Telefone = Console.ReadLine();
         System.Console.WriteLine("Informe o email: ");
         this.Email = Console.ReadLine();
+        this.id = Id();
     }
     public override string ObterDescricao()
     {
