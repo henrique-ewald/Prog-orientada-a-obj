@@ -6,9 +6,6 @@ public class Programa
 {
     private static void Main(string[] args)
     {
-        Local localDoEvento;
-        Evento evento;
-        Palestra palestra;
         GestaoDeEventos Geral = new GestaoDeEventos();
 
         Console.WriteLine("Sistema de Gestão de Eventos");
